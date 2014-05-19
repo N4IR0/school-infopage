@@ -1,4 +1,5 @@
 <?php
+ini_set('include_path', '/usr/share/php');
 include ("checklogin.php");
 require("config.php");
 require_once "Mail.php";
