@@ -1,5 +1,6 @@
 <?php
 error_reporting(0);
+ini_set('include_path', '/usr/share/php');
 require_once "Mail.php";
 require("admin/config.php");
 $homeworks;
