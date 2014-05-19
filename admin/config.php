@@ -1,31 +1,31 @@
 <?php
 ## MYSQL - CONFIG ##
 $mysql_host = 'localhost';
-$mysql_database = 'fi12';
-$mysql_user = 'fi12';
-$mysql_password = 'pw';
+$mysql_database = 'fi13';
+$mysql_user = 'fi13';
+$mysql_password = 'PASSWORD';
 ##
 
-$conf['class'] = "Fi12"; # Klassenname
+$conf['class'] = "FI_13A"; # Klassenname
 $conf['city'] = "Plauen"; # Schulort
-$conf['url'] = "http://fi12-plauen.tk"; # URL der Seite
-$conf['admurl'] = "http://admin.fi12-plauen.tk"; # Admin-URL der Seite
+$conf['url'] = "http://www.fi13a.de"; # URL der Seite
+$conf['admurl'] = "http://admin.fi13a.de"; # Admin-URL der Seite
 $conf['subject5'] = $conf['class']." Erinnerung 5 Tage"; # Betreff für Mails
 $conf['subject1'] = $conf['class']." Erinnerung 1 Tage"; # Betreff für Mails
 $conf['subjectconfirm'] = $conf['class']." Infoseite - Anmeldung"; # Betreff für Mails
-$conf['from'] = "support@fi12-plauen.tk"; # Absendermail
+$conf['from'] = "support@fi13a.de"; # Absendermail
 $conf['fromfull'] = $conf['class']."-".$conf['city']." Schulwebsite <".$conf['from'].">"; # Absendermail
 $conf['host'] = "ssl://localhost"; # SMTP Server
 $conf['port'] = "465"; # PORT
-$conf['username'] = "support@fi12-plauen.tk"; # Nutzername
-$conf['pw'] = ""; # Passwort
-$conf['logpath'] = "/var/www/fi12/notification_log"; # Path für Notification Log
+$conf['username'] = "support@fi13a.de"; # Nutzername
+$conf['pw'] = "PASSWORD"; # Passwort
+$conf['logpath'] = "/var/www/vhosts/fi13a.de/httpdocs/notification_log"; # Path für Notification Log
 
 ### FTP Daten
-$conf['ftp_host'] = "fi12-plauen.tk";
+$conf['ftp_host'] = "fi13a.de";
 $conf['ftp_port'] = "21";
-$conf['ftp_user'] = "fi12";
-$conf['ftp_pw'] = "password";
+$conf['ftp_user'] = "fi13";
+$conf['ftp_pw'] = "PASSWORD";
 
 
 ### Texte für die automatischen notifications
