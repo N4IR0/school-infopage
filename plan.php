@@ -18,7 +18,7 @@ exit();
 <body>
 
 <div id="container">
-<div id="header"><h1>BSZ FI_12a Infoseite</h1></div>
+<div id="header"><h1>BSZ <?php echo $conf['class']; ?> Infoseite</h1></div>
 <div id="sub_header">Stundenplan</div>
 <div id="main_content_top"></div>
 <div id="main_content">
