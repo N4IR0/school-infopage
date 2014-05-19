@@ -1,20 +1,18 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4
+-- version 4.1.12
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Erstellungszeit: 19. Mai 2014 um 20:07
--- Server Version: 5.5.37-0ubuntu0.12.04.1
--- PHP-Version: 5.3.10-1ubuntu3.11
+-- Host: localhost:3306
+-- Erstellungszeit: 20. Mai 2014 um 01:07
+-- Server Version: 5.5.37-0+wheezy1-log
+-- PHP-Version: 5.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+--
+-- Datenbank: `fi13`
+--
 
 -- --------------------------------------------------------
 
@@ -30,7 +28,7 @@ CREATE TABLE IF NOT EXISTS `arbeiten` (
   `info` text NOT NULL,
   `link` text NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=37 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=41 ;
 
 -- --------------------------------------------------------
 
@@ -43,8 +41,7 @@ CREATE TABLE IF NOT EXISTS `blackboard` (
   `date` date NOT NULL,
   `text` text NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
-
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
 
 -- --------------------------------------------------------
 
@@ -57,8 +54,7 @@ CREATE TABLE IF NOT EXISTS `emails` (
   `confirmed` tinyint(1) NOT NULL,
   `email` varchar(255) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=81 ;
-
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=89 ;
 
 -- --------------------------------------------------------
 
@@ -76,7 +72,6 @@ CREATE TABLE IF NOT EXISTS `homeworks` (
   PRIMARY KEY (`ID`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=54 ;
 
-
 -- --------------------------------------------------------
 
 --
@@ -93,9 +88,9 @@ CREATE TABLE IF NOT EXISTS `lastupdate` (
 --
 
 INSERT INTO `lastupdate` (`typ`, `update`) VALUES
-('arbeiten', '2014-05-19 18:00:00'),
+('arbeiten', '2014-05-20 00:35:00'),
 ('homeworks', '2014-05-19 18:00:00'),
-('stunden', '2014-05-19 18:00:00');
+('stunden', '2014-05-20 00:12:00');
 
 -- --------------------------------------------------------
 
@@ -109,8 +104,7 @@ CREATE TABLE IF NOT EXISTS `login` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
-
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 -- --------------------------------------------------------
 
@@ -133,14 +127,14 @@ CREATE TABLE IF NOT EXISTS `plan_gr1` (
 --
 
 INSERT INTO `plan_gr1` (`ID`, `mon`, `tue`, `wed`, `thu`, `fri`) VALUES
-(1, 'C#', 'ÖND', 'Netze', 'Projektierung', 'Java'),
-(2, 'C#', 'ÖND', 'Netze', 'Projektierung', 'Java'),
-(3, 'C#', 'BWG', 'Netze', 'HTML', 'Java'),
-(4, 'Deutsch', 'BWG', 'Englisch', 'HTML', 'Deutsch'),
-(5, 'Deutsch', 'Sport', NULL, 'Sozialkunde', 'BWG'),
-(6, 'Datenbanken', 'Sport', NULL, 'Sozialkunde', 'BWG'),
-(7, 'Datenbanken', NULL, NULL, 'Englisch', NULL),
-(8, NULL, NULL, NULL, 'BWG', NULL);
+(1, 'ITS-GDI', 'ITS-AM', NULL, 'EBA-HTML', 'EBA-Java'),
+(2, 'ITS-GDI', 'ITS-AM', NULL, 'EBA-HTML', 'EBA-Java'),
+(3, 'ITS-GDI', 'BWG', 'BWG', 'EBA-Projekt', 'Deu'),
+(4, 'ITS-BS', 'BWG', 'BWG', 'EBA-Projekt', 'BWG'),
+(5, 'ITS-BS', 'SP', 'Deu', 'ITS-Inst', 'BWG'),
+(6, 'ITS-BS', 'Sp', 'Deu', 'ITS-Inst', 'BWG'),
+(7, 'ITS-HW', 'Eng', 'ITS-HW', NULL, NULL),
+(8, 'ITS-HW', 'Eng', 'ITS-Inst', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -163,14 +157,14 @@ CREATE TABLE IF NOT EXISTS `plan_gr2` (
 --
 
 INSERT INTO `plan_gr2` (`ID`, `mon`, `tue`, `wed`, `thu`, `fri`) VALUES
-(1, NULL, 'ÖND', 'Java', 'HTML', 'Netze'),
-(2, NULL, 'ÖND', 'Java', 'HTML', 'Netze'),
-(3, NULL, 'BWG', 'Java', 'Projektierung', 'Netze'),
-(4, 'Deutsch', 'BWG', 'Englisch', 'Projektierung', 'Deutsch'),
-(5, 'Deutsch', 'Sport', 'C#', 'Sozialkunde', 'BWG'),
-(6, 'Datenbanken', 'Sport', 'C#', 'Sozialkunde', 'BWG'),
-(7, 'Datenbanken', NULL, 'C#', 'Englisch', NULL),
-(8, NULL, NULL, NULL, 'BWG', NULL);
+(1, 'ITS-BS', 'ITS-AM', 'EBA-Java', 'EBA-Projekt', NULL),
+(2, 'ITS-BS', 'ITS-AM', 'EBA-Java', 'EBA-Projekt', NULL),
+(3, 'ITS-BS', 'BWG', 'BWG', 'EBA-HTML', 'Deu'),
+(4, 'ITS-GDI', 'BWG', 'BWG', 'EBA-HTML', 'BWG'),
+(5, 'ITS-GDI', 'SP', 'Deu', 'ITS-Inst', 'BWG'),
+(6, 'ITS-GDI', 'Sp', 'Deu', 'ITS-Inst', 'BWG'),
+(7, 'ITS-HW', 'Eng', 'ITS-HW', NULL, NULL),
+(8, 'ITS-HW', 'Eng', 'ITS-Inst', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -215,9 +209,4 @@ CREATE TABLE IF NOT EXISTS `stunden` (
   `neuerlehrer` varchar(255) NOT NULL,
   `infos` text NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=38 ;
-
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=51 ;
